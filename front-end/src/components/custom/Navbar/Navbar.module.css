@@ -1,27 +1,24 @@
 nav {
     background: rgba(91, 1, 105, 0.2);
-    padding: 1px;
+    padding: 10px 5px;
     border-radius: 50px;
-    max-width: 80%; /* taille max nav */
-    margin: 450px 0 30px 30px; 
     backdrop-filter: blur(30px);
     box-shadow: 0 0 30px rgba(227, 228, 237, 0.37);
     width: fit-content; /* ajuste le bg au contenu */
     position: fixed; 
     z-index: 1000; /* pour pas perturber les autres éléments */
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
 }
 
 ul {
-    list-style: none;
     display: flex;
     flex-direction: column; /* aligne icones verticalement */
-    align-items: flex-start; 
-    padding: 0; /* enleve le padding par défaut qui se crée à gauche*/
+    align-items: center; 
 }
 
 a {
-    text-decoration: none;
-    color: white;
     padding: 10px 20px; 
     display: block; /* permet d'espacer les iconnes */
 }
@@ -30,5 +27,8 @@ a {
 li:hover svg {
     transform: scale(1.4); /* zoom */
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)); /* halo */
+}
+
+svg {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
