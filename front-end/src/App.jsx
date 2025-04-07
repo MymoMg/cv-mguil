@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Navbar from './components/custom/Navbar/Navbar'
 import Hero from './components/custom/Hero/Hero'
-import Button from './components/ui/Button/Button'
+// import Timeline from './components/custom/Timeline/Timeline'
 
 import './App.css'
 
@@ -11,6 +11,7 @@ function App() {
     <>
       <Navbar/>
       <Hero/>
+      {/* <Timeline/> */}
     </>
   )
 }

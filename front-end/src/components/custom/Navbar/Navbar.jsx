@@ -6,6 +6,7 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faListCheck } from '@fortawesome/free-solid-svg-icons';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 
+
 const links = [
     { 
         title : <FontAwesomeIcon icon={faHouse} />,

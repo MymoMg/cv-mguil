@@ -5,10 +5,11 @@ import Shape from "../Shape/Shape";
 export default function Hero() {
 return (
     <section className={styles.hero}>
-        <Shape/>
+        <Shape className={`${styles.shape} ${styles.shapeOne}`}/>
+        <Shape className={`${styles.shape} ${styles.shapeTwo}`}/>
         <div className={styles.container}>
             <div className={styles.content}>
-                <h2> MGUIL Meriem </h2>
+                <h2> MGUIL &nbsp; Meriem </h2>
                 <h1> Étudiante en Développement Web</h1>
                 <p> Après un parcours en web design et stratégie de communication, j’ai fait le choix de me reconvertir dans le développement web pour donner une nouvelle dimension à ma créativité mais surtout pour pouvoir produire mes créations web.
                 Actuellement en formation CDA - Concepteur Développeur d’Applications, je suis actuellement à la recherche d’un stage pour continuer à apprendre et monter en compétences. </p>

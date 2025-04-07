@@ -3,12 +3,15 @@
     place-items: center; /* Centre horizontalement */
     min-height: 100vh; /* Prend toute la hauteur de la page */
     text-align: center; /* Centre le texte */
+    position: relative;
+    max-width: 100vw;
+    overflow-x: clip; /*cut la shape*/
 }
 
 .hero .content {
     display: grid;
     place-items: center; /* Centre horizontalement */
-    gap: 0.75rem;
+    gap: 1.25rem;
 }
 
 .hero .container {
@@ -18,25 +21,19 @@
 }
 
 .hero h1 {
-    margin: 10px 0; /* espacement entre les 2 titres */
     font-size: 4rem;
-    background: linear-gradient(80deg, #915FDF, #b408ae);
-    background-clip: text;
-    color: transparent;
-    font-weight: bold;
+    color: #915FDF;
     line-height: 1;
 }
 
 .hero h2{
     font-size: 2.5rem;
-    color: white;
     line-height: 1;
-
 }
 
 
 .hero p {
-    color: white;
+    color: #D6D6D6;
     max-width: 50%; /* pour limiter largeur paragraphe */
     font-size: 1.2rem;
     font-style: italic;
@@ -45,4 +42,21 @@
 .buttonContainer {
     display: flex;
     gap: 2rem;
+}
+
+.shape {
+    position: absolute;
+    opacity: 0.7;
+}
+
+.shapeOne {
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.shapeTwo {
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
 }
