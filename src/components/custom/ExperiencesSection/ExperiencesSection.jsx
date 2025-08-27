@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./ExperiencesSection.module.css";
 import Card from "../../ui/Card/Card";
-import { title } from "framer-motion/client";
+import Shape from "../Shape/Shape";
 
 const experiences = [
   {
@@ -61,6 +61,9 @@ export default function ExperiencesSection() {
 
   return (
     <section className={styles.experienceSection}>
+      <Shape className={`${styles.shape} ${styles.shapeOne}`}/>
+      <Shape className={`${styles.shape} ${styles.shapeTwo}`}/>
+      <div className={styles.container}>
       <h2>Mes Expériences Pro</h2>
       <div className={styles.experiencesGrid}>
         {experiences.map((exp, index) => (
@@ -70,8 +73,7 @@ export default function ExperiencesSection() {
             <p className={styles.company}>{exp.company}</p>
             <p className={styles.year}>{exp.year}</p>
 
-            {expandedIndex === index ? (
-              <p className={styles.description}>
+              <p className={`${styles.description} ${expandedIndex === index ? styles.expanded : styles.collapsed}`}>
                 {exp.description.split(" - ").map((item, idx) => (
                   <span key={idx}>
                     {idx !== 0 && "- "}
@@ -80,7 +82,6 @@ export default function ExperiencesSection() {
                   </span>
                 ))}
               </p>
-            ) : null}
 
             <button
               className={styles.toggleButton}
@@ -90,6 +91,7 @@ export default function ExperiencesSection() {
             </button>
           </Card>
         ))}
+      </div>
       </div>
     </section>
   );
