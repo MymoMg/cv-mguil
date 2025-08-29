@@ -1,4 +1,4 @@
-nav {
+.nav {
     background: rgba(91, 1, 105, 0.2);
     padding: 10px 5px;
     border-radius: 50px;
@@ -12,23 +12,23 @@ nav {
     transform: translateY(-50%);
 }
 
-ul {
+.nav ul {
     display: flex;
     flex-direction: column; /* aligne icones verticalement */
     align-items: center; 
 }
 
-a {
+.nav a {
     padding: 10px 20px; 
     display: block; /* permet d'espacer les iconnes */
 }
 
 
-li:hover svg {
+.nav li:hover svg {
     transform: scale(1.4); /* zoom */
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)); /* halo */
 }
 
-svg {
+.nav svg {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

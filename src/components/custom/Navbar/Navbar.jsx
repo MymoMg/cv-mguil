@@ -32,7 +32,7 @@ const links = [
 
 export default function Navbar() {
 return (
-        <nav>
+        <nav className={styles.nav}>
             <ul>
                 {links.map((link, index) => (
                     <li key={index}>
