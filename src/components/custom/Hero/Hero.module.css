@@ -15,6 +15,7 @@
 }
 
 .hero .container {
+    z-index: 1;
     display: grid;
     place-items: center; /* Centre horizontalement */
     gap: 4rem;

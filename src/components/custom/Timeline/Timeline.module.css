@@ -36,9 +36,6 @@
   position: relative;
   z-index: 2;
   width: calc(50% - 100px);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .left {
@@ -73,11 +70,6 @@
 .right::before {
   left: -100px;
   transform: translate(-50%, -50%);
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 @media screen and (max-width: 768px) {

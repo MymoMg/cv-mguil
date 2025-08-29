@@ -2,9 +2,9 @@ import styles from "./Hero.module.css"
 import Button from "../../ui/Button/Button";
 import Shape from "../Shape/Shape";
 
-export default function Hero() {
+export default function Hero({...props}) {
 return (
-    <section className={styles.hero}>
+    <section className={styles.hero} {...props}>
         <Shape className={`${styles.shape} ${styles.shapeOne}`}/>
         <Shape className={`${styles.shape} ${styles.shapeTwo}`}/>
         <div className={styles.container}>

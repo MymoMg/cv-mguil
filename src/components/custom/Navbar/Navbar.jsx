@@ -10,23 +10,23 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 const links = [
     { 
         title : <FontAwesomeIcon icon={faHouse} />,
-        path : "/"
+        path : "#home"
     },
     {
         title : <FontAwesomeIcon icon={faGraduationCap} />,
-        path : "/"
+        path : "#diplomes"
     },
     {
         title : <FontAwesomeIcon icon={faBriefcase} />,
-        path : "/"
+        path : "#experiences"
     },
     {
         title : <FontAwesomeIcon icon={faListCheck} />,
-        path : "/"
+        path : "#competences"
     },
     {
         title : <FontAwesomeIcon icon={faPen} />,
-        path : "/"
+        path : "#projets"
     }
 ]
 

@@ -11,9 +11,9 @@ function App() {
   return (
     <>
       <Navbar/>
-      <Hero/>
-      <Timeline/>
-      <ExperiencesSection/>
+      <Hero id="home"/>
+      <Timeline id="diplomes"/>
+      <ExperiencesSection id="experiences"/>
     </>
   )
 }

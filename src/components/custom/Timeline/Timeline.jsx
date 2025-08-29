@@ -1,10 +1,9 @@
-import { useEffect, useRef } from "react";
 import styles from "./Timeline.module.css"
-import TimelineCard from "./TimelineCard/ TimelineCard"   
-import { section } from "framer-motion/client";
+import TimelineCard from "./TimelineCard/ TimelineCard"  
+import { motion } from "motion/react" 
 
 const experiences = [
-   {
+  {
     role: "BAC +3 CDA Concepteur Développeur d'Applications",
     company: "CCI Campus, Strasbourg",
     year: "Octobre 2024 - Juillet 2025",
@@ -26,56 +25,31 @@ const experiences = [
   },
 ];
 
-export default function Timeline() {
-  const itemsRef = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(styles.visible);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    itemsRef.current.forEach(el => {
-      if (el) observer.observe(el);
-    });
-
-    return () => {
-      itemsRef.current.forEach(el => {
-        if (el) observer.unobserve(el);
-      });
-    };
-  }, []);
-
+export default function Timeline( { ...props } ) {
   return (
-    <section className={styles.section}>
-    <h2>Mes Diplômes et Formations</h2>
-    <div className={styles.timeline}>
-      <ul>
-        {experiences.map((link, index) => (
-
-          <li
-            key={index}
-            ref={el => (itemsRef.current[index] = el)}
-            className={`${styles.timelineItem} ${index % 2 === 0 ? styles.left : styles.right}`}
-            data-index={index + 1}
-          >
-            
-            <TimelineCard
-              role={link.role}
-              company={link.company}
-              year={link.year}
-            />
-          </li>
-        ))}
-      </ul>
-    </div>
+    <section className={styles.section} {...props}>
+      <h2>Mes Diplomes</h2>
+      <div className={styles.timeline}>
+        <ul>
+          {experiences.map((link, index) => (
+            <motion.li
+              key={index}
+              className={`${styles.timelineItem} ${index % 2 === 0 ? styles.left : styles.right}`}
+              data-index={index + 1}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <TimelineCard
+                role={link.role}
+                company={link.company}
+                year={link.year}
+              />
+            </motion.li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }

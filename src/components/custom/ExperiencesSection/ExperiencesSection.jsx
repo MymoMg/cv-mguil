@@ -52,7 +52,7 @@ const experiences = [
   },
 ];
 
-export default function ExperiencesSection() {
+export default function ExperiencesSection({...props}) {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const toggleDescription = (index) => {
@@ -60,7 +60,7 @@ export default function ExperiencesSection() {
   };
 
   return (
-    <section className={styles.experienceSection}>
+    <section className={styles.experienceSection} {...props}>
       <Shape className={`${styles.shape} ${styles.shapeOne}`}/>
       <Shape className={`${styles.shape} ${styles.shapeTwo}`}/>
       <div className={styles.container}>
