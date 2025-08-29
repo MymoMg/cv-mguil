@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import styles from "./Timeline.module.css"
 import TimelineCard from "./TimelineCard/ TimelineCard"   
+import { section } from "framer-motion/client";
 
 const experiences = [
    {
@@ -53,6 +54,8 @@ export default function Timeline() {
   }, []);
 
   return (
+    <section className={styles.section}>
+    <h2>Mes Diplômes et Formations</h2>
     <div className={styles.timeline}>
       <ul>
         {experiences.map((link, index) => (
@@ -73,5 +76,6 @@ export default function Timeline() {
         ))}
       </ul>
     </div>
+    </section>
   );
 }

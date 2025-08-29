@@ -1,3 +1,5 @@
-.description {
-  font-size: 0.8rem;
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
