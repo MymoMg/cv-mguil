@@ -4,7 +4,7 @@ import { motion } from "motion/react"
 
 const experiences = [
   {
-    role: "BAC +3 CDA Concepteur Développeur d'Applications",
+    role: "Formation CDA (Concepteur Développeur d'Applications)",
     company: "CCI Campus, Strasbourg",
     year: "Octobre 2024 - Juillet 2025",
   },
@@ -28,7 +28,7 @@ const experiences = [
 export default function Timeline( { ...props } ) {
   return (
     <section className={styles.section} {...props}>
-      <h2>Mes Diplomes</h2>
+      <h2>Mes Diplomes et Formations</h2>
       <div className={styles.timeline}>
         <ul>
           {experiences.map((link, index) => (
