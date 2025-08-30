@@ -1,37 +1,53 @@
 import styles from "./Footer.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
-import { faNode } from "@fortawesome/free-brands-svg-icons";
+import { faSquareGithub } from "@fortawesome/free-brands-svg-icons";
+import { faAt } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 
-const links = [
+const contact = [
     {
         icon : <FontAwesomeIcon icon={faSquareGithub} />,
+        link : "https://github.com/MymoMg"
     },
     {
-        icon : <FontAwesomeIcon icon={faLinux} />,
+        icon : <FontAwesomeIcon icon={faAt} />,
+        link : "mailto:mmguil68@gmail.com"
     },
     {
-        icon : <FontAwesomeIcon icon={faLinux} />,
+        icon : <FontAwesomeIcon icon={faLinkedin} />,
+        link : "https://www.linkedin.com/in/meriem-mguil-855b94216/"
     }
 ]
 
-const Footer= () => {
+const Footer = () => {
   return (
-<section className={styles.devskills}>
-      <Shape className={`${styles.shape} ${styles.shapeOne}`}/>
-        <h2>Compétences en Programmation</h2>
-        <ul className={styles.programmingSkills}>
-            {links.map((link, index) => (
-                <li key={index}>
-                    {link.icon}
-                    <span className="h4"> {link.title} </span>
-                </li>
-            )
-            )} 
-        </ul>
-      </section>
-);
+    <footer className={styles.footer}>
+      <div className={styles.icons}>
+        {contact.map((item, index) => (
+          <a
+            key={index}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.icon}
+          >
+            {item.icon}
+          </a>
+        ))}
+      </div>
+
+      <a href="/mentions-legales" className={styles.mentions}>
+        Mentions Légales
+      </a>
+
+      <hr className={styles.separator} />
+
+      <p className={styles.copyright}>
+        ©2025 Mguil Meriem TOUS DROITS RÉSERVÉS
+      </p>
+    </footer>
+  );
 };
 
 export default Footer;

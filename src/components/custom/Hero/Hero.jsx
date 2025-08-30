@@ -15,8 +15,8 @@ return (
                 Actuellement en ..., je suis à la recherche d’une alternance pour continuer à apprendre et à monter en compétences. </p>
                 </div>
             <div className={styles.buttonContainer}>
-                <Button href="/assets/mg-meriem-cv.pdf" target="_blank">  Mon CV en PDF ›  </Button>
-                <Button> Mes Projets › </Button>
+                <Button href="/assets/CV_MGUIL_Meriem.pdf" target="_blank">  Mon CV en PDF ›  </Button>
+                <Button href="https://aaaaaakdjhksgd.my.canva.site/copie-de-portfolio"> Mes Projets › </Button>
             </div>
         </div>
     </section> 

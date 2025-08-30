@@ -4,7 +4,7 @@ import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faListCheck } from '@fortawesome/free-solid-svg-icons';
-import { faPen } from '@fortawesome/free-solid-svg-icons';
+// import { faPen } from '@fortawesome/free-solid-svg-icons';
 
 
 const links = [
@@ -24,10 +24,10 @@ const links = [
         title : <FontAwesomeIcon icon={faListCheck} />,
         path : "#competences"
     },
-    {
-        title : <FontAwesomeIcon icon={faPen} />,
-        path : "#projets"
-    }
+    // {
+    //     title : <FontAwesomeIcon icon={faPen} />,
+    //     path : "#projets"
+    // }
 ]
 
 export default function Navbar() {

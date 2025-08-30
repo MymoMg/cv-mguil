@@ -31,10 +31,11 @@ const links = [
     }
 ]
 
-const DevSkills = () => {
+const DevSkills = ( {...props }) => {
   return (
-<section className={styles.devskills}>
+<section className={styles.devskills} {...props}>
       <Shape className={`${styles.shape} ${styles.shapeOne}`}/>
+      <div className={styles.container}>
         <h2>Compétences en Programmation</h2>
         <ul className={styles.programmingSkills}>
             {links.map((link, index) => (
@@ -45,6 +46,7 @@ const DevSkills = () => {
             )
             )} 
         </ul>
+        </div>
       </section>
 );
 };
