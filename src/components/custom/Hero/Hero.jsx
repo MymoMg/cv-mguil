@@ -12,7 +12,7 @@ return (
                 <h2> MGUIL &nbsp; Meriem </h2>
                 <h1> Étudiante en Développement Web</h1>
                 <p> Après un parcours en web design et stratégie de communication, j’ai fait le choix de me reconvertir dans le développement web pour donner une nouvelle dimension à ma créativité mais surtout pour pouvoir produire mes créations web.
-                Actuellement en ..., je suis à la recherche d’une alternance pour continuer à apprendre et à monter en compétences. </p>
+                Actuellement en Master Informatique, je suis à la recherche d’une alternance pour continuer à apprendre et à monter en compétences. </p>
                 </div>
             <div className={styles.buttonContainer}>
                 <Button href="/assets/CV_MGUIL_Meriem.pdf" target="_blank">  Mon CV en PDF ›  </Button>
