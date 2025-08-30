@@ -64,6 +64,9 @@ a {
 ul, ol {
     list-style: none;
 }
+#root {
+    overflow: hidden;
+}
 
 /* Responsive */
 @media (max-width: 900px) {
