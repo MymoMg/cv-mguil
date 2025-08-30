@@ -1,6 +1,7 @@
 .footer {
   padding: 2rem;
   z-index: 1;
+  position: relative;
 }
 
 .icons {
